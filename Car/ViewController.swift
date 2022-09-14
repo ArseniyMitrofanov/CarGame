@@ -10,47 +10,84 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var myCar: UIImageView!
     
-
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var road: UIView!
+    
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { Timer in
+        var score = 0
+        //разметка
+       let plateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { Timer in
             let plate = UIView()
             plate.backgroundColor = .white
-            plate.frame  = CGRect(x: 195, y: -100, width: 25, height: 100)
-            self.view.addSubview(plate)
+            plate.frame  = CGRect(x: 158, y: -100, width: 25, height: 100)
+           self.road.addSubview(plate)
+           self.road.bringSubviewToFront(self.myCar)
             UIView.animate(withDuration: 4,
-                                  delay: 0,
+                           delay: 0,
                            options: [.curveLinear]) {
                 plate.frame.origin.y += 1000
-                   } completion: { isCompleted in
-                       plate.removeFromSuperview()
-                   }
+            } completion: { isCompleted in
+                plate.removeFromSuperview()
+            }
 
         }
-        
-        Timer.scheduledTimer(withTimeInterval: 4, repeats: true) { Timerr in
+        //anyCar
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { Timerr in
             let anyCar = UIImageView(image: UIImage(named: "anyCar"))
-            var set = Int.random(in: 0...1)
+            let set = Int.random(in: 0...1)
             switch set{
             case 0:
                 anyCar.frame  = CGRect(x: 66, y: -200, width: 100, height: 200)
             default:
                 
-                anyCar.frame  = CGRect(x: 249, y: -200, width: 100, height: 200)
+                anyCar.frame  = CGRect(x: 250, y: -200, width: 100, height: 200)
             }
             self.view.addSubview(anyCar)
-          
-            UIView.animate(withDuration: 4,
-                                  delay: 0,
-                           options: [.curveLinear]) {
-                anyCar.frame.origin.y += 1300
-                   } completion: { isCompleted in
-                       anyCar.removeFromSuperview()
-//                       timerrr.invalidate()
-                   }
-
+            
+            Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { Timer in
+                anyCar.frame.origin.y += 4
+                if anyCar.frame.intersects(self.myCar.frame){
+                    print("your score is", score)
+                    Timer.invalidate()
+                    Timerr.invalidate()
+                    anyCar.removeFromSuperview()
+                    self.myCar.image = UIImage(named: "fire")
+                    self.button.removeFromSuperview()
+                }
+                if anyCar.frame.origin.y > 1000 {
+                    score += 1
+                    print(score)
+                    Timer.invalidate()
+                    anyCar.removeFromSuperview()
+                }
+            }
+            
         }
+    }
+    @IBAction func go(_ sender: UIButton) {
+        sender.isEnabled = false
+        if self.myCar.frame.origin.x < 150{
+            //go right
+            Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { Timer in
+                self.myCar.frame.origin.x += 4
+                if self.myCar.frame.origin.x == 213{
+                    Timer.invalidate()
+                    sender.isEnabled = true
+                }
+                    }
+        }else{
+            //go left
+            Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { Timer in
+                self.myCar.frame.origin.x -= 4
+                if self.myCar.frame.origin.x == 29{
+                    Timer.invalidate()
+                    sender.isEnabled = true
+                }
+                    }
+        }
+        
     }
     
 }
