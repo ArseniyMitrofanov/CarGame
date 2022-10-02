@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var score = 0
+        switch UserDefaults.standard.string(forKey: "myCar"){
+        case "myCar1": myCar.image = UIImage(named: "myCar1")
+        case "myCar2": myCar.image = UIImage(named: "myCar2")
+        case "myCar3": myCar.image = UIImage(named: "myCar3")
+        default : myCar.image = UIImage(named: "myCar1")
+        }
         // разметка
         let plateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             let plate = UIView()
@@ -103,6 +109,5 @@ class ViewController: UIViewController {
             recordsViewController.modalPresentationStyle = .fullScreen
             self.present(recordsViewController, animated: true)
         }
-        
     }
 }

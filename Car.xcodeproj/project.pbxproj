@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		46DB456F1C7332CBD591442B /* Pods_Car.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0955572E2EF860F0DEB490B /* Pods_Car.framework */; };
 		EA19444628E9A2AF00B9CC30 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19444528E9A2AF00B9CC30 /* RecordsViewController.swift */; };
+		EA19444828E9C89D00B9CC30 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19444728E9C89D00B9CC30 /* SettingsViewController.swift */; };
 		EAC4B5F028CC673100D8CE16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4B5EF28CC673100D8CE16 /* AppDelegate.swift */; };
 		EAC4B5F228CC673100D8CE16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4B5F128CC673100D8CE16 /* SceneDelegate.swift */; };
 		EAC4B5F428CC673100D8CE16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4B5F328CC673100D8CE16 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		8EB90E5D6B2A15A002D1DEEA /* Pods-Car.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car.debug.xcconfig"; path = "Target Support Files/Pods-Car/Pods-Car.debug.xcconfig"; sourceTree = "<group>"; };
 		D0955572E2EF860F0DEB490B /* Pods_Car.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Car.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA19444528E9A2AF00B9CC30 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		EA19444728E9C89D00B9CC30 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EAC4B5EC28CC673100D8CE16 /* Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Car.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC4B5EF28CC673100D8CE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAC4B5F128CC673100D8CE16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				EAC4B5FA28CC673300D8CE16 /* LaunchScreen.storyboard */,
 				EAC4B5FD28CC673300D8CE16 /* Info.plist */,
 				EA19444528E9A2AF00B9CC30 /* RecordsViewController.swift */,
+				EA19444728E9C89D00B9CC30 /* SettingsViewController.swift */,
 			);
 			path = Car;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				EAC4B5F428CC673100D8CE16 /* ViewController.swift in Sources */,
 				EAC4B5F028CC673100D8CE16 /* AppDelegate.swift in Sources */,
 				EAC4B5F228CC673100D8CE16 /* SceneDelegate.swift in Sources */,
+				EA19444828E9C89D00B9CC30 /* SettingsViewController.swift in Sources */,
 				EA19444628E9A2AF00B9CC30 /* RecordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
