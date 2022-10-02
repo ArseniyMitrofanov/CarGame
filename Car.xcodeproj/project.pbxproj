@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46DB456F1C7332CBD591442B /* Pods_Car.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0955572E2EF860F0DEB490B /* Pods_Car.framework */; };
+		EA19444628E9A2AF00B9CC30 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19444528E9A2AF00B9CC30 /* RecordsViewController.swift */; };
 		EAC4B5F028CC673100D8CE16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4B5EF28CC673100D8CE16 /* AppDelegate.swift */; };
 		EAC4B5F228CC673100D8CE16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4B5F128CC673100D8CE16 /* SceneDelegate.swift */; };
 		EAC4B5F428CC673100D8CE16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4B5F328CC673100D8CE16 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		2054CD2FE15B5AAC96F91C4A /* Pods-Car.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car.release.xcconfig"; path = "Target Support Files/Pods-Car/Pods-Car.release.xcconfig"; sourceTree = "<group>"; };
 		8EB90E5D6B2A15A002D1DEEA /* Pods-Car.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car.debug.xcconfig"; path = "Target Support Files/Pods-Car/Pods-Car.debug.xcconfig"; sourceTree = "<group>"; };
 		D0955572E2EF860F0DEB490B /* Pods_Car.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Car.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA19444528E9A2AF00B9CC30 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		EAC4B5EC28CC673100D8CE16 /* Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Car.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC4B5EF28CC673100D8CE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAC4B5F128CC673100D8CE16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 				8EB90E5D6B2A15A002D1DEEA /* Pods-Car.debug.xcconfig */,
 				2054CD2FE15B5AAC96F91C4A /* Pods-Car.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				EAC4B5F828CC673300D8CE16 /* Assets.xcassets */,
 				EAC4B5FA28CC673300D8CE16 /* LaunchScreen.storyboard */,
 				EAC4B5FD28CC673300D8CE16 /* Info.plist */,
+				EA19444528E9A2AF00B9CC30 /* RecordsViewController.swift */,
 			);
 			path = Car;
 			sourceTree = "<group>";
@@ -99,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC4B60028CC673300D8CE16 /* Build configuration list for PBXNativeTarget "Car" */;
 			buildPhases = (
+				EA19444228E6C9F300B9CC30 /* Run Script */,
 				3E5E3A751753A609EE271183 /* [CP] Check Pods Manifest.lock */,
 				EAC4B5E828CC673100D8CE16 /* Sources */,
 				EAC4B5E928CC673100D8CE16 /* Frameworks */,
@@ -182,6 +185,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EA19444228E6C9F300B9CC30 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -192,6 +213,7 @@
 				EAC4B5F428CC673100D8CE16 /* ViewController.swift in Sources */,
 				EAC4B5F028CC673100D8CE16 /* AppDelegate.swift in Sources */,
 				EAC4B5F228CC673100D8CE16 /* SceneDelegate.swift in Sources */,
+				EA19444628E9A2AF00B9CC30 /* RecordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
