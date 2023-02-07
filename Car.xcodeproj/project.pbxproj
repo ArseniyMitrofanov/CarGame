@@ -87,12 +87,12 @@
 				EAC4B5EF28CC673100D8CE16 /* AppDelegate.swift */,
 				EAC4B5F128CC673100D8CE16 /* SceneDelegate.swift */,
 				EAC4B5F328CC673100D8CE16 /* ViewController.swift */,
+				EA19444528E9A2AF00B9CC30 /* RecordsViewController.swift */,
+				EA19444728E9C89D00B9CC30 /* SettingsViewController.swift */,
 				EAC4B5F528CC673100D8CE16 /* Main.storyboard */,
 				EAC4B5F828CC673300D8CE16 /* Assets.xcassets */,
 				EAC4B5FA28CC673300D8CE16 /* LaunchScreen.storyboard */,
 				EAC4B5FD28CC673300D8CE16 /* Info.plist */,
-				EA19444528E9A2AF00B9CC30 /* RecordsViewController.swift */,
-				EA19444728E9C89D00B9CC30 /* SettingsViewController.swift */,
 			);
 			path = Car;
 			sourceTree = "<group>";
